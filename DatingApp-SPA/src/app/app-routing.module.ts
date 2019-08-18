@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: "member/edit", component: MemberEditComponent, 
       resolve: { user: MemberEditResolver}, canDeactivate : [PreventUnsavedChanges] },
       { path: "messages", component: MessagesComponent },
-      { path: "lists", component: ListsComponent }
+      { path: "lists", component: ListsComponent },
     ]
   },
 

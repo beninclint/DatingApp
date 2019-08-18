@@ -3,6 +3,7 @@
     <a class="navbar-brand" [routerLink]="['/home']">Dating App</a>
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
+      
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/members']">Matches </a>
       </li>
@@ -15,6 +16,9 @@
     </ul>
 
     <div *ngIf="loggedIn()" dropdown class="dropdown text-light">
+      <span class="mr-1">
+<img src="{{photoUrl}}" alt="">
+      </span>
       <a class="dropdown-toggle" dropdownToggle>
         Welcome {{ authService.decodedToken?.unique_name | titlecase }}
       </a>
