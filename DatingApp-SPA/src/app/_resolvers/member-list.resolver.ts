@@ -17,7 +17,7 @@ export class MemberListResolver implements Resolve<User[]> {
   ) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<User[]> {
-      console.log("page size is "+ this.pageSize);
+    //console.log("page size is "+ this.pageSize);
     return this.userService.getUsers(this.pageNumber, this.pageSize).pipe(
       catchError(error => {
         this.alertify.error("Problem Retieving Data");
